@@ -1,6 +1,4 @@
-<img src="img/design.png"
-     alt="Omnifood design"
-     style="widthh:100%; margin-bottom: 20px;" />
+![Omnifood Design](img/design.png)
 
 # Omnifood
 
