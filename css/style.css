@@ -8,6 +8,7 @@
 
 -- Line-heights: 1, 1.05, 1.6
 
+-- Letter spacing: -.5px, .75px
 
 === 02 Colors
 - Primary: #e67e22;
@@ -70,13 +71,35 @@ body {
 }
 
 /* ================= General Components ================== */
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  color: #333;
+}
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.5px;
-  color: #333;
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
 }
 
 .btn:link,
@@ -239,4 +262,8 @@ body {
 
 .section-how {
   padding: 9.6rem 0;
+}
+
+.step-image {
+  width: 50%;
 }
