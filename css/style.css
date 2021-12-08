@@ -1,150 +1,3 @@
-/*
-=== 01 Typography
-
--- Font-size System (px)
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
--- Font-weights: 400, 500, 600, 700
-
--- Line-heights: 1, 1.05, 1.6
-
--- Letter spacing: -.5px, .75px
-
-=== 02 Colors
-- Primary: #e67e22;
-- Tints: #fdf2e9;
-- Shades: #cf711f;
-- Accents: 
-- Greys: #555; #333;
-
-=== 05 Shadows
-
-=== 06 Border-radius
-- 9px
-
-=== 07 Whitespace
-
-=== Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  line-height: 1;
-  color: #555;
-}
-
-/* =================== Layout System ================= */
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
-
-.grid {
-  display: grid;
-  gap: 9.6rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* ================= General Components ================== */
-.heading-primary,
-.heading-secondary {
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.05;
-  color: #333;
-}
-.heading-primary {
-  font-size: 5.2rem;
-  margin-bottom: 3.2rem;
-}
-
-.heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1.2;
-  margin-bottom: 9.6rem;
-}
-
-.heading-tertiary {
-}
-
-.subheading {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  color: #cf711f;
-  margin-bottom: 1.6rem;
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  text-decoration: none;
-  border-radius: 9px;
-
-  /* Put transition on original "state" */
-  transition: background-color 0.3s;
-}
-
-.btn--full:link,
-.btn--full:visited {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f;
-}
-
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-}
-
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-
-  /* Trick to add border inside element */
-  box-shadow: inset 0 0 0 3px #fff;
-}
-
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
 /* ================= Header ================== */
 .header {
   display: flex;
@@ -258,12 +111,82 @@ body {
   font-weight: 700;
 }
 
+/* ================= Section: Featured in  ================== */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.75px;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
 /* ================= Section: How it works  ================== */
 
 .section-how {
   padding: 9.6rem 0;
 }
 
+.step-number {
+  font-size: 9.8rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-image-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-image-box::before,
+.step-image-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  /* position behind the image*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-image-box::before {
+  width: 60%;
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-image-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
 .step-image {
-  width: 50%;
+  width: 35%;
 }
