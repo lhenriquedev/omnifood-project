@@ -20,7 +20,7 @@
 === 05 Shadows
 
 === 06 Border-radius
-- 9px
+- 9px, 11px
 
 === 07 Whitespace
 
@@ -44,6 +44,10 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #555;
+}
+
+strong {
+  font-weight: 500;
 }
 
 /* =================== Layout System ================= */
